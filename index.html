@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptocurrency Tracker</h1>
+        <button id="darkModeToggle" class="toggle-btn">🌙 Toggle Dark Mode</button>
+
+        <div class="crypto-selection">
+            <h2>Select Cryptocurrencies for Comparison:</h2>
+            <label for="cryptoSelect">Choose cryptocurrencies to compare:</label>
+            <select id="cryptoSelect" multiple aria-label="Select cryptocurrencies to compare">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            <button id="compareBtn" class="compare-btn">Compare Prices</button>
+        </div>
+
+        <div id="cryptoData" class="crypto-data">
+            <h3>Cryptocurrency Data:</h3>
+            <div id="cryptoInfo" class="crypto-info"></div>
+            <canvas id="cryptoChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
