@@ -41,7 +41,7 @@ document.getElementById('compareBtn').addEventListener('click', () => {
 
     const ctx = document.getElementById('cryptoChart').getContext('2d');
 
-\    if (ctx) {
+    if (ctx) {
         new Chart(ctx, {
             type: 'bar',
             data: {
