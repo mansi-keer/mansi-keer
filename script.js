@@ -1,4 +1,3 @@
-// Sample data for the dropdown
 const cryptoList = [
     { symbol: "BTC", name: "Bitcoin", price: 96414, marketCap: 1909037968987, change: 4.8 },
     { symbol: "ETH", name: "Ethereum", price: 3661.79, marketCap: 441227125219, change: 9.95 },
@@ -7,7 +6,6 @@ const cryptoList = [
     { symbol: "BNB", name: "Binance Coin", price: 646.57, marketCap: 94057703124, change: 4.90 }
 ];
 
-// Populating the select dropdown
 const cryptoSelect = document.getElementById('cryptoSelect');
 cryptoList.forEach(crypto => {
     const option = document.createElement('option');
@@ -16,14 +14,12 @@ cryptoList.forEach(crypto => {
     cryptoSelect.appendChild(option);
 });
 
-// Handle the 'Compare Prices' button click
 document.getElementById('compareBtn').addEventListener('click', () => {
     const selectedValues = Array.from(cryptoSelect.selectedOptions).map(option => option.value);
     const selectedCryptos = cryptoList.filter(crypto => selectedValues.includes(crypto.symbol));
     
-    // Display cryptocurrency data as cards
     const cryptoInfo = document.getElementById('cryptoInfo');
-    cryptoInfo.innerHTML = ''; // Clear any previous content
+    cryptoInfo.innerHTML = '';
     
     selectedCryptos.forEach(crypto => {
         const card = document.createElement('div');
@@ -40,15 +36,12 @@ document.getElementById('compareBtn').addEventListener('click', () => {
         cryptoInfo.appendChild(card);
     });
 
-    // Create Chart.js graph (Ensure this part works!)
     const labels = selectedCryptos.map(crypto => crypto.name);
     const data = selectedCryptos.map(crypto => crypto.price);
 
-    // Ensure that the chart element exists
     const ctx = document.getElementById('cryptoChart').getContext('2d');
 
-    // Create a bar chart
-    if (ctx) {
+\    if (ctx) {
         new Chart(ctx, {
             type: 'bar',
             data: {
@@ -62,10 +55,10 @@ document.getElementById('compareBtn').addEventListener('click', () => {
                 }]
             },
             options: {
-                responsive: true, // Ensures responsiveness of the chart
+                responsive: true, 
                 scales: {
                     y: {
-                        beginAtZero: true // Ensures the Y-axis starts at 0
+                        beginAtZero: true 
                     }
                 }
             }
@@ -75,7 +68,6 @@ document.getElementById('compareBtn').addEventListener('click', () => {
     }
 });
 
-// Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
