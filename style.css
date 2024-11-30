@@ -1,73 +1,144 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 #preferences {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 #preferences select {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #preferences select:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 main {
-  padding: 20px;
+    padding: 20px;
 }
 
 #crypto-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .card img {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 button {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
+}
+
+#favorite-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 10px;
+    max-width: 100%; 
+}
+
+.favorite-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 1 200px; 
+    min-width: 200px; 
+}
+
+.favorite-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.favorite-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.favorite-card button {
+    background-color: #FF5733; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.favorite-card button:hover {
+    background-color: #e74c3c; 
+}
+
+#selected-cryptos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#selected-cryptos table th,
+#selected-cryptos table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#selected-cryptos table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#selected-cryptos table td button {
+    padding: 5px 10px;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#selected-cryptos table td button:hover {
+    background-color: #e74c3c;
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
